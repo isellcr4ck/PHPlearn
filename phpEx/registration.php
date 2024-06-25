@@ -8,4 +8,12 @@ require_once ROOT . '/incs/db.php';
 
 $title = 'Регистрация';
 
+if ($_SERVER["REQUEST_METHOD"] === "POST")
+{
+ $data = validation();
+ if ($data) {
+     registration($data);
+ }
+}
+
 require_once VIEWS . '/registration.tpl.php';

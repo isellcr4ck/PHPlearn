@@ -1,6 +1,6 @@
 <?php require_once VIEWS . '/incs/header.tpl.php'; ?>
 
-    <div class="container">
+    <div class="container"">
         <div class="col-md-5 mx-auto">
             <form method="post">
                 <div class="form-floating mb-3">
@@ -28,19 +28,5 @@
         </div>
     </div>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] === 'POST')
-{
-$email = $_POST["email"];
-$name = $_POST["name"];
-$surname = $_POST["surname"];
-$pass = $_POST["pass"];
-
-$conn = mysqli_connect('localhost', 'root', 'root', 'register');
-$sql = mysqli_query($conn,"INSERT INTO `users` (email, name, surname, pass) VALUES ('$email', '$name', '$surname', '$pass')");
-
-}
-
-?>
 
 <?php require_once VIEWS . '/incs/footer.tpl.php'; ?>
