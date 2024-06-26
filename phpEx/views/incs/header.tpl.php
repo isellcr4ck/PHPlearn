@@ -13,12 +13,9 @@
         <?php if ($_SERVER['REQUEST_URI'] == '/phpEx/' || $_SERVER['REQUEST_URI'] == '/phpEx/index.php'):?>
         <nav>
             <ul>
-                <li><a href="/phpEx">Задачи</a></li>
-                <li><a href="#">Макеты</a></li>
-                <li><a href="#">О себе</a></li>
-                <li><a href="#">Интеграция API</a></li>
                 <li><a href="registration.php">Регистрация</a></li>
                 <li><a href="authorization.php">Авторизация</a></li>
+                <li><a href=""></a></li>
             </ul>
         </nav>
         <?php endif; ?>
