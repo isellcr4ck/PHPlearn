@@ -48,7 +48,7 @@ function registration(array $data) :void
         global $db;
         $sth = $db->prepare("INSERT INTO `users` (email,name,surname,password) VALUES (:email,:name,:surname,:pass)");
         $sth->execute($data);
-        header('Location: ./index.php');
+        header('Location: ./account.php');
     } catch (PDOException $e) {
         echo "Ошибка: " . $e->getMessage();
     }
@@ -69,8 +69,10 @@ function login() :void
       // Аутентификация успешна
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_email'] = $user['email'];
+        $_SESSION['user_name'] = $user['name'];
+        $_SESSION['user_surname'] = $user['surname'];
 
-        header('Location: ./index.php');
+        header('Location: ./account.php');
         exit();
     } else {
         echo 'Неправильный логин или пароль' . PHP_EOL;

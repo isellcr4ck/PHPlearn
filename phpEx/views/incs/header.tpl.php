@@ -8,17 +8,15 @@
     <title><?=$title ?? 'Заголовок'?></title>
 </head>
 <body>
-    <div class="container mt-3">
-    <header>
-        <?php if ($_SERVER['REQUEST_URI'] == '/phpEx/' || $_SERVER['REQUEST_URI'] == '/phpEx/index.php'):?>
+    <div class="container">
         <nav>
             <ul>
+                <li><a href="index.php">Главная</a></li>
                 <li><a href="registration.php">Регистрация</a></li>
                 <li><a href="authorization.php">Авторизация</a></li>
-                <li><a href=""></a></li>
+                <li><a href="account.php">Аккаунт</a></li>
             </ul>
         </nav>
-        <?php endif; ?>
         <h1><?=$title ?? 'Заголовок'?></h1>
     </header>
     <main>
